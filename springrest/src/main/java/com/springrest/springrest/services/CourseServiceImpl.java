@@ -55,4 +55,11 @@ public class CourseServiceImpl implements Courseservice {
 		return course;
 	}
 
+	@Override
+	public void deleteCourse(long courseId) {
+		// TODO Auto-generated method stub
+		list.remove(courseId);
+		System.out.println("The course with id:"+courseId+" was removed.");
+	}
+
 }
