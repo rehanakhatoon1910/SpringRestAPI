@@ -51,6 +51,7 @@ public class MyController {
 	
 	@DeleteMapping("/courses/{courseId}")
 	public void deleteCourse(@PathVariable String courseId) {
+		System.out.println("tetsing delete mapping");
 		this.courseservice.deleteCourse(Long.parseLong(courseId));
 	}
 }
