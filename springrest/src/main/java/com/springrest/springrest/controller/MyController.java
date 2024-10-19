@@ -5,6 +5,9 @@ import java.util.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.springrest.springrest.entities.Courses;
@@ -32,5 +35,15 @@ public class MyController {
 	@GetMapping("/courses/{courseId}")
 	public Courses getCourse(@PathVariable String courseId) {
 		return this.courseservice.getCourse(Long.parseLong(courseId));
+	}
+	
+	@PostMapping("/courses")
+	public Courses addCourse(@RequestBody Courses course) {
+		return this.courseservice.addCourse(course);
+	}
+	
+	@PutMapping("/courses/{courseId}")
+	public Courses updateCourse(@RequestBody Courses course) {
+		return this.courseservice.updateCourse(course);
 	}
 }

@@ -9,4 +9,8 @@ public interface Courseservice {
 	public List<Courses> getCourses();
 	
 	public Courses getCourse(long courseid);
+
+	public Courses addCourse(Courses course);
+
+	public Courses updateCourse(Courses course);
 }

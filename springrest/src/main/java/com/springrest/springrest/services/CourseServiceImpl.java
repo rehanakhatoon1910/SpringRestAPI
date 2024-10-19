@@ -34,4 +34,25 @@ public class CourseServiceImpl implements Courseservice {
 		return c;
 	}
 
+	@Override
+	public Courses addCourse(Courses course) {
+		// TODO Auto-generated method stub
+		
+			list.add(course);
+			return course;
+		
+	}
+
+	@Override
+	public Courses updateCourse(Courses course) {
+		// TODO Auto-generated method stub
+//		if(list.contains(course.getId())){
+////		   if(course.getTitle().equalsIgnoreCase(null))
+//			list.set(list.indexOf(course.getId()), course);
+//		}
+		
+		list.add(course);
+		return course;
+	}
+
 }
